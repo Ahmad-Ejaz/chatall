@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat 4 All</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <div id="userName">
+        <div class="container">
+            <div class="row">
+                <div class="" align="center">
+                    <img height="300" width="300" class="img-circle" src="/images/minion.jpg" />
+                    <h3>Pick your super awesome nickname</h3>
+                    <div class="form-group">
+                        <form id="setUserName">
+                            <input type="text" name="name" autofocus required placeholder="Your nickname" id="username" />
+                            <button class="btn btn-primary" type="submit">Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class='error' style='display:none'></div>
+    <div id="chatWindow">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-offset-1 panel panel-primary">
+                    <div class="panel-body">
+                        <div id="contentWrap">
+                            <div id="chatWrap" style=" border-radius: 10px;
+                              background: #F0E0B0;background: url(/images/wood.jpg);min-height: 400px;max-height: 400px;overflow-y: scroll;">
+                                <div id="chatHistory"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="col-md-4 col-sm-offset-1 panel panel-default">
+                    <div class="panel-heading">Currently Online</div>
+                    <div class="panel-body">
+                        <div id="users"></div>
+                    </div>
+                </div>
+                <h4 align="center">Invite your friends by sharing the <a target="_blank" href="https://awesome-socket-io.herokuapp.com/">link</a></h4>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+                <form id="chatBox">
+                    <div class="form-group">
+                        <textarea required autofocus style="background-color:#ffffe6;border:double 4px orange;border-radius: 0.5em;" rows="3" cols="60" id="chatMessage" placeholder="Write your message and press enter.."></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <h1 align="center"><code>@harry  ciao</code> to say ciao to harry privately</h1>
+        </div>
+
+    </div>
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>
